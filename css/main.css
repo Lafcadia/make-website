@@ -1,11 +1,12 @@
 @font-face {
     font-family: CaskaydiaCoveNerdFont;
-    src: url(../static/CaskaydiaCoveNerdFontMono-Bold.ttf);
+    src: url(../font/CaskaydiaCoveNerdFontMono-Bold.ttf);
     font-weight: 400;
     font-style: normal
 }
 
-.navbar,div#nav {
+.navbar,
+div#nav {
     left: 0;
     width: 100%;
     padding: 10px;
@@ -19,7 +20,7 @@ div#nav {
 
 .navbar {
     top: 0;
-    height: 50px;
+    height: 56px;
     background-color: #2196f3;
     box-sizing: border-box;
     z-index: 9998;
@@ -30,7 +31,9 @@ div#nav {
     justify-content: flex-start
 }
 
-.navbar li a,.navbar ul,div#nav {
+.navbar li a,
+.navbar ul,
+div#nav {
     display: flex;
     justify-content: center;
     align-items: center
@@ -56,19 +59,24 @@ div#nav {
 }
 
 @font-face {
-    font-family:consola;src:url(../static/consola.ttf);font-weight:400;font-style:normal
+    font-family: consola;
+    src: url(../font/consola.ttf);
+    font-weight: 400;
+    font-style: normal
 }
 
 #copy {
-    font-family: CaskaydiaCoveNerdFont,serif;
+    font-family: CaskaydiaCoveNerdFont, serif;
     font-size: 12px
 }
 
 #code {
-    font-family: consola,serif
+    font-family: consola, serif
 }
 
-#start_page,body,html {
+#start_page,
+body,
+html {
     width: 100%;
     height: 100%
 }
@@ -111,7 +119,10 @@ body {
     padding: 7px
 }
 
-#dao,#html_editor,#markdown,#qq {
+#dao,
+#html_editor,
+#markdown,
+#qq {
     border-radius: 10px;
     color: #fff;
     position: fixed;
@@ -137,11 +148,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #16b777;
+    background-color: #ffffff;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
-    display: none
+    display: none;
+    z-index: 999;
 }
 
 #import h1 {
@@ -161,7 +173,14 @@ body {
     margin-right: 10px
 }
 
-#exit,#import button {
+input button[type=file] {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px
+}
+
+#exit,
+#import button {
     background-color: #fff;
     color: #6dbd63;
     border: 0;
@@ -174,7 +193,8 @@ body {
     margin: 10px 0
 }
 
-#take-photo,.gitrepo {
+#take-photo,
+.gitrepo {
     z-index: 9999;
     position: fixed;
     top: 0
@@ -191,24 +211,28 @@ body {
 
 #blocklyDiv {
     position: fixed;
-    width: 100%;
-    height: calc(100% - 42px);
-    margin-top: 42px
+    width: 60%;
+    height: calc(100% - 40px);
+}
+
+.blocklyFlyout {
+    backdrop-filter: blur(50px);
+    border-radius: 4px;
+    border-right: 0.001px solid rgba(255, 253, 253, 0.7);
+}
+
+.blocklyFlyoutBackground {
+    opacity: 0;
 }
 
 #blocklyDiv .blocklyToolboxDiv {
-    background-color: #fff!important;
-    border-right: 1px solid #e5e7eb
+    background-color: #fff;
+    border-right: 1px solid #e5e7eb;
 }
 
-#blocklyDiv .blocklyMainBackground {
-    fill: #f2f3f7!important
-}
-
-#blocklyDiv .blocklyFlyoutBackground {
-    fill: #fff!important;
-    opacity: .5!important;
-    fill-opacity: 1!important
+#blocklyDiv {
+    position: absolute;
+    left: 40% !important;
 }
 
 #blocklyDiv .blocklyTreeRow {
@@ -217,7 +241,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0
+    margin: 0;
+}
+
+.blocklyToolboxContents {
+    padding: .5em;
+}
+
+.blocklyTreeRow {
+    padding: 3px;
+    margin-bottom: .5em;
+    border-radius: 4px;
 }
 
 #blocklyDiv .blocklyTreeSeparator {
@@ -226,4 +260,115 @@ body {
 
 .gitrepo {
     right: 5px
+}
+
+#box-parent {
+    display: none;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#theme-box {
+    border-radius: 10px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 75%;
+    height: 70%;
+    padding: 32px;
+}
+
+#g-apk {
+    display: none;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#g-apk-child {
+    border-radius: 10px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    width: 40%;
+    height: 45%;
+}
+
+#cloudwork {
+    display: none;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#cloudwork-child {
+    border-radius: 10px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    width: 40%;
+    height: 45%;
+}
+
+.datainput {
+    padding: .75rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: .875rem;
+    line-height: 1.25rem;
+    background-color: var(--background);
+    margin: .5em;
+    outline: 0;
+    width: calc(100% - 3em - 2px);
+    transition: border .8s;
+    box-shadow: var(--box-shadow);
+
+}
+
+body {
+    background-image: url(https://static.codemao.cn/pickduck/rJ74KWDs0.jpg?hash=FsP728EZjY33-BSUhdk1AAvoYiRY);
+}
+
+.g-apk-card {
+    background-color: white;
+}
+
+#mask {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 56px;
+    left: 40%;
+    width: 60%;
+    height: calc(100% - 56px);
+    z-index: 99999999999999999999999999999999999999999999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "NotoSansCJKsc-Regular";
+    src:
+        url("https://creation.codemao.cn/coconut/web/1.20.0/static/media/NotoSansCJKsc-Regular.35a647da.woff2") format("woff2"),
+}
+
+body {
+    font-family: "NotoSansCJKsc-Regular";
 }

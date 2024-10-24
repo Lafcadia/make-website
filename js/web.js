@@ -1,39 +1,11 @@
 $(document).ready(function () {
-    var date = new Date();
-    $("#msg_text").text("欢迎！Welcome！");
-    $(".msg").fadeIn(500);
-    $(".msg").fadeOut(1000);
-    $('#year').text(date.getFullYear());
-
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-
-    if (month == 10 && day == 24) {
-        swal({
-            "title": "节日快乐！",
-            "text": "1024程序员节快乐！",
-            "icon": "success",
-            "button": false,
-            "timer": 1500
-        });
-    }
-
     $("#qq").click(function () {
-        swal({'title': '提示', 'text': 'QQ交流群的群号：135452025', 'icon': 'success'});
+        swal({'title': '加入QQ交流群', 'text': '群号：135452025'});
     });
 
     if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-        $("#nav-pc").hide();
-        $("#helpme").hide();
-        $("#aboutme").hide();
-        $("#startuse").hide();
-        $('.da').removeClass("da");
-
-        $.growl.notice({
-            title: "提示",
-            message:
-                "建议使用电脑端打开，移动端建议切换为横屏以获得更好的体验",
-            duration: 10000,
-        });
+        $('.intro').addClass("flex-col");
+        $('.group').addClass("grid-1");
+        $('body').css('padding', '16px 32px');
     }
 });

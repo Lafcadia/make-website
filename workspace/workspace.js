@@ -1,7 +1,22 @@
+const theme1 = Blockly.Theme.defineTheme('dark', {
+    base: Blockly.Themes.Zelos,
+    componentStyles: {
+        workspaceBackgroundColour: "#1f1f1f",
+        toolboxBackgroundColour: "#c2c2c2"
+    },
+    name: "dark"
+});
+
+if($.cookie("theme")=="#494949"){
+    themename = "dark";
+}else{
+    themename = "zelos";
+}
+
 var options = {
     toolbox: document.getElementById("toolbox"),
-    collapse: false,
-    comments: false,
+    collapse: true,
+    comments: true,
     disable: false,
     maxBlocks: Infinity,
     trashcan: true,
@@ -10,13 +25,13 @@ var options = {
     css: true,
     media: "./media/",
     rtl: false,
-    scrollbars: false,
+    scrollbars: true,
     sounds: true,
     oneBasedIndex: true,
     zoom: {
         controls: true, wheel: true,
     },
-    theme: 'zelos',
+    theme: themename,
     renderer: "codemao",
 };
 var blocklyDiv = document.getElementById("blocklyDiv");
@@ -25,6 +40,8 @@ var workspaceBlocks = document.getElementById("workspaceBlocks");
 Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
 
 y = true;
+
+var lastcode=" ";
 
 async function myUpdateFunction(_event) {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
@@ -56,7 +73,11 @@ async function myUpdateFunction(_event) {
     })
 
     document.getElementById("code").textContent = code;
-    document.getElementById("look").innerHTML = code;
+
+    if(lastcode != code.replace("\n","").replace(/(\n|\r|\r\n|↵)/g, '')){
+        document.getElementById("look_html").srcdoc = code;
+        lastcode = code.replace("\n","").replace(/(\n|\r|\r\n|↵)/g, '');
+    }
 
     Prism.highlightAll();
 }

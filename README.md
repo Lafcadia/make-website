@@ -1,19 +1,34 @@
-# 网页开发助手
+<h1 align="center">
+  网页开发助手
+</h1>
 
+<p align="center">
+  <a href="README.md">中文</a> | <a href="README-EN.md">English</a>
+</p>
+
+<p align="center">
+  助你快速开发网页，让世界上没有难做的网页！
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/license/svipwing/make-website" alt="License">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+  <img src="https://img.shields.io/badge/Powered%20by-Jishuyun%20Team-blue"/>
+</p>
+
+<hr/>
+
+<center>
+<img src="./image/cover.png" />
 <hr />
-<img src="./image/cover.png" width="400px" height="300px" />
-<hr />
-<img src="./image/help2.png" width="400px" height="300px" />
+<img src="./image/show.png" />
 <hr />
 <img src="https://compass.gitee.com/chart/svzp5m02.svg?metric=overview&y_trans=1&range=6M" alt="OSS Compass Analyze" />
-
-#### 介绍
-
-助你快速开发网页，让世界上没有难做的网页！
+</center>
 
 #### 公告
 
-由于开发者学业原因，暂时暂停更新，预计7月中旬恢复更新，感谢大家一直以来的支持！
+已恢复更新，暑假期间将发布新功能，敬请期待！
 
 #### 软件架构
 
@@ -43,13 +58,19 @@
 3. king2022，开发者
 4. 可执行程序，彩蛋开发者
 5. Fgaoxing，界面UI设计、开发者
+6. WA - APK打包功能 开发者
+7. 海藻酸钠 - 官网UI优化的设计师、开发者
+8. 青柠 - 后端开发者，负责账号系统和云作品
+9. 酶游明 - 前端开发者，编辑器UI优化
+10. zx - 前端开发者，添加积木
 
-本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，预览区截图采用html2canvas.js
+本仓库使用了jquery和bootstrap框架，markdown编辑器采用markdown.js、html2md.js，代码高亮采用highlight.js，截图功能使用js-screen-shot
 
 #### github仓库状态
 
 [![Stargazers repo roster for @svipwing/make-website](https://reporoster.com/stars/svipwing/make-website)](https://github.com/svipwing/make-website/stargazers)
 [![Forkers repo roster for @svipwing/make-website](https://reporoster.com/forks/svipwing/make-website)](https://github.com/svipwing/make-website/network/members)
+[![Star History Chart](https://coco.codemao.cn/http-widget-proxy/https@SEP@api.star-history.com/svg?repos=svipwing/make-website&type=Date)](https://star-history.com/#svipwing/make-website&Date)
 
 #### 参与贡献
 
