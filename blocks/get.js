@@ -3,7 +3,7 @@ Blockly.JavaScript.ORDER_ATOMIC = 99;
 Blockly.Blocks["h1"] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("第一大标题:")
+            .appendField("标题1:")
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
@@ -17,7 +17,7 @@ Blockly.Blocks["h1"] = {
 Blockly.Blocks["h2"] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("第二大标题:")
+            .appendField("标题2:")
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
@@ -32,7 +32,7 @@ Blockly.Blocks["h2"] = {
 Blockly.Blocks["h3"] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("第三大标题:")
+            .appendField("标题3:")
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
@@ -47,7 +47,7 @@ Blockly.Blocks["h3"] = {
 Blockly.Blocks["p"] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("普通文字:")
+            .appendField("段落:")
             .appendField(new Blockly.FieldTextInput("text"), "text")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
@@ -595,7 +595,7 @@ Blockly.Blocks["flex_align_items"] = {
 Blockly.Blocks["text_color"] = {
     init: function () {
         this.appendDummyInput()
-            .appendField("文本颜色的英文名/十六进制代码:")
+            .appendField("文本颜色(英文名/Hex颜色代码):")
             .appendField(new Blockly.FieldTextInput("red"), "color");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
@@ -739,7 +739,7 @@ Blockly.Blocks["button"] = {
             .appendField("按钮,文本")
             .appendField(new Blockly.FieldTextInput("按钮文本"), "text")
             .appendField(",点击后跳转到链接")
-            .appendField(new Blockly.FieldTextInput("http://baidu.com"), "link")
+            .appendField(new Blockly.FieldTextInput("https://baidu.com"), "link")
             .appendField(",id(可留空):")
             .appendField(new Blockly.FieldTextInput("id"), "id");
         this.setPreviousStatement(true, null);
